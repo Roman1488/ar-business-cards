@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
     res.send(req.body);
 });
 router.post('/',function(req,res){
-    console.log(req.body);      // your JSON
+    console.log(req.body);
     res.setHeader('Content-Type', 'application/json');
-    res.end(req.body);
+    res.send(req.body);
 });
 
 module.exports = router;
