@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.send(req.body);
+});
+router.post('/',function(req,res){
+    console.log(req.body);      // your JSON
 });
 
 module.exports = router;
