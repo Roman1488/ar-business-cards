@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
 });
 router.post('/',function(req,res){
     console.log(req.body);      // your JSON
+    res.setHeader('Content-Type', 'application/json');
+    res.end(req.body);
 });
 
 module.exports = router;
